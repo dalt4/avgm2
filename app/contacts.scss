@@ -1,0 +1,63 @@
+main {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.contact__description {
+  line-height: 50px;
+  text-shadow: 1px 1px 2px black;
+}
+
+.contact__map {
+  position: relative;
+  width: 40vw;
+  height: 60vh;
+  filter: invert(100%) saturate(10) grayscale(100%) drop-shadow(0 0 39px black);
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: .6;
+}
+
+.contact__map-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset white 0 15px 25px,
+              inset white 0 -15px 25px;
+  background: whitesmoke;
+  transition: .4s all ease-in-out;
+  color: #232323;
+  text-align: center;
+  line-height: 100%;
+  letter-spacing: 2px;
+}
+
+.contact__map-cover.active {
+  top: -100vh;
+}
+
+
+//----------------------------------------media 960-----------------------------//
+
+@media screen and (max-width: 960px) {
+  main {
+    height: auto;
+  }
+  .contact__map {
+    position: relative;
+    margin: 0 auto;
+    width: 90vw;
+    height: 60vh;
+  }
+}

@@ -168,7 +168,7 @@ if (body.classList.contains('mainPage')) {
     var slides = document.querySelectorAll('.partners__slide');
 
     for (var i = 0; i < slides.length; i++) {
-        slides[i].style.background = 'url("img/parnters/Picture' + i + '.jpg") no-repeat center/100% auto';
+        slides[i].style.background = 'url("img/partners/Picture' + i + '.jpg") no-repeat center/100% auto';
     }
 
     $('.partners__slider').slick({
@@ -454,4 +454,14 @@ if (body.classList.contains('cleaningPage')) {
 
         ajax_mail($(".popup__cleaning-form"));
     })();
+}
+
+//=======================================for contacts=================================================================//
+
+
+if (body.classList.contains('contactsPage')) {
+    var contactMapCover = document.querySelector('.contact__map-cover');
+    window.onload = function () {
+        contactMapCover.classList.add('active');
+    };
 }

@@ -5,40 +5,45 @@ const gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     babel = require('gulp-babel'),
     uglify = require('gulp-uglify'),
-    // rename = require("gulp-rename"),
-    // inlineCss = require('gulp-inline-css'),
-    htmlmin = require('gulp-htmlmin'),
     browserSync = require('browser-sync');
 sass.compiler = require('node-sass');
 
 //----------------------gulp image-------------------------//
 
 gulp.task('img', () =>
-    gulp.src({
-        src1:'app/img/*'
-    })
+    gulp.src('app/img/*')
         .pipe(imagemin())
-        .pipe(gulp.dest({
-            dest1:'dist/img'
-        }))
+        .pipe(gulp.dest('dist/img'))
 );
 
+gulp.task('partners', () =>
+    gulp.src('app/img/partners/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img/partners'))
+);
 
+gulp.task('svg', () =>
+    gulp.src('app/img/svg/*')
+        .pipe(gulp.dest('dist/img/svg'))
+);
 
-// gulp.task('image', gulp.parallel('img', 'cards', 'oracle', 'story'));
+gulp.task('video', () =>
+    gulp.src('app/img/video/*')
+        .pipe(gulp.dest('dist/img/video'))
+);
+
+gulp.task('image', gulp.parallel('img', 'partners', 'svg', 'video'));
 
 
 //----------------------gulp build------------------------//
 
-gulp.task('html', () =>
-    gulp.src('app/*.html')
-        .pipe(htmlmin({collapseWhitespace: true}))
+gulp.task('app', () =>
+    gulp.src('app/*.{png, xml, php, svg, webmanifest, ico}')
         .pipe(gulp.dest('dist'))
 );
 
 gulp.task('pages', () =>
-    gulp.src('app/templates/*.html')
-        .pipe(htmlmin({collapseWhitespace: true}))
+    gulp.src('app/templates/*.php')
         .pipe(gulp.dest('dist/templates'))
 );
 
@@ -64,13 +69,7 @@ gulp.task('libs', () =>
         .pipe(gulp.dest('dist/libs'))
 );
 
-gulp.task('svg', () =>
-    gulp.src('app/img/svg/*')
-        .pipe(gulp.dest('dist/img/svg'))
-);
-
-
-gulp.task('build', gulp.parallel('html','pages', 'css', 'uglify', 'fonts', 'libs', 'svg'));
+gulp.task('build', gulp.parallel('app','pages', 'css', 'uglify', 'fonts', 'libs'));
 
 //--------------------gulp default------------------------//
 gulp.task('browser-sync', function () {

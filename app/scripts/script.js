@@ -169,7 +169,7 @@ if (body.classList.contains('mainPage')) {
     let slides = document.querySelectorAll('.partners__slide');
 
     for (let i = 0; i < slides.length; i++) {
-        slides[i].style.background = 'url("img/parnters/Picture' + i + '.jpg") no-repeat center/100% auto'
+        slides[i].style.background = 'url("img/partners/Picture' + i + '.jpg") no-repeat center/100% auto'
     }
 
     $('.partners__slider').slick({
@@ -484,4 +484,12 @@ if (body.classList.contains('cleaningPage')) {
     ajax_mail($(".popup__cleaning-form"));
 }
 
+//=======================================for contacts=================================================================//
 
+
+if (body.classList.contains('contactsPage')) {
+    const contactMapCover = document.querySelector('.contact__map-cover');
+    window.onload = () => {
+        contactMapCover.classList.add('active')
+    }
+}

@@ -1,14 +1,14 @@
 <main>
     <div class="intro" id="intro">
         <h1 class="intro__title">AVGM</h1>
-        <p class="intro__description">Многопрофильная компания ТОО "Atyrau Vital Global Mote
+        <p class="intro__description">Многопрофильная компания ТОО "Asia Vital Global Mote
             LTD" образована в 2017 году. Наша компания является
             членом ОЮЛ "Ассоциация экологических организаций
             Казахстана" , членом « Ассоциации практикующих экологов».</p>
     </div>
     <div class="about" id="about">
         <div class="wrapper">
-            <div class="about__title">Atyrau Vital Global Mote LTD</div>
+            <div class="about__title">Asia Vital Global Mote LTD</div>
 
             <div class="about__description">
                 <p>

@@ -6,13 +6,13 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0"
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <title>Atyrau Vital Global Mote</title>
-    <meta content="ТОО «Atyrau Vital Global Mote LTD» занимается экологическим аутсорсингом.
+    <title>Asia Vital Global Mote</title>
+    <meta content="ТОО «Asia Vital Global Mote LTD» занимается экологическим аутсорсингом.
            Мы предлагаем Вам свои услуги: аэродинамические испытания, вентиляция, строительство,
             сервис и услуги монтажа, утилизация распределение отходов, обслуживание электрика,
              системы кондиционирования, комплексное обслуживание объектов клининг"
           name="description">
-    <meta content="avgm, avgm.kz, avgm kz, Atyrau Vital Global Mote LTD, Atyrau Vital Global Mote, Утилизация отходов,
+    <meta content="avgm, avgm.kz, avgm kz, Asia Vital Global Mote LTD, Asia Vital Global Mote, Утилизация отходов,
             Утилизация отходов казахстан, клининг атырау, переработка отходов, переработка пищевых отходов,
             утилизация пищевых отходов, утилизация пищевых отходов казахстан, переработка пищевых отходов казахстан,
             утилизация отходов пищевой промышленности, утилизация пищевых отходов цена, способы утилизации пищевых отходов,
@@ -28,9 +28,10 @@
     <link color="#5bbad5" href="safari-pinned-tab.svg" rel="mask-icon">
     <meta content="#da532c" name="msapplication-TileColor">
     <meta content="#ffffff" name="theme-color">
-    <link href="libs/slick.css" rel="stylesheet"/>
-    <link href="libs/slick-theme.css" rel="stylesheet"/>
+    <?= $page === 'mainPage'? '<link href="libs/slick.css" rel="stylesheet"/>' : ''?>
+    <?= $page === 'mainPage'? '<link href="libs/slick-theme.css" rel="stylesheet"/>' : ''?>
     <link href="styles.css" rel="stylesheet">
+    <?= $page === 'contactsPage'? '<link href="contacts.css" rel="stylesheet">' : ''?>
 </head>
 <body class="<?= $page ?>">
 <!--<div class="preloader">-->
@@ -62,10 +63,10 @@
                     <a class="header__nav-link <?= $page === 'equipmentPage'? "active" : ''?>" href="equipment.php">ОБОРУДОВАНИЕ</a>
                 </div>
                 <div class="header__nav-item">
-                    <a class="header__nav-link <?= $page === 'cleaningPage'? "active" : ''?>" href="cleaning.php">клининг</a>
+                    <a class="hide header__nav-link <?= $page === 'cleaningPage'? "active" : ''?>" href="cleaning.php">клининг</a>
                 </div>
                 <div class="header__nav-item">
-                    <a class="header__nav-link <?= $page === 'articlesPage'? "active" : ''?>" href="articles.php">статьи</a>
+                    <a class="hide header__nav-link <?= $page === 'articlesPage'? "active" : ''?>" href="articles.php">статьи</a>
                 </div>
                 <div class="header__nav-item">
                     <a class="header__nav-link  <?= $page === 'contactsPage'? "active" : ''?>" href="contacts.php">контакты</a>
@@ -91,7 +92,7 @@
     <div class="wrapper">
         <div class="footer__content">
             <div class="footer__logo"></div>
-            <h2 class="footer__title">Atyrau Vital Global Mote LTD</h2>
+            <h2 class="footer__title">Asia Vital Global Mote LTD</h2>
             <div class="footer__contacts">
                 <div class="telephone">
                     <h3>Телефоны</h3>
@@ -112,9 +113,12 @@
     </div>
 </footer>
 '?>
+<div class="sign__dalt4444">
+    <a target="blank" href="https://dalt4444.com" class="sign__dalt4444-link">сайт создан daltt4444.com 2020г</a>
+</div>
 <script src="libs/jquery.min.js"></script>
 <script src="libs/jquery.vide.min.js"></script>
-<script src="libs/slick.min.js"></script>
+<?= $page === 'mainPage'? '<script src="libs/slick.min.js"></script>' : ''?>
 <script src="script.js"></script>
 
 </body>
