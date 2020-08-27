@@ -171,13 +171,22 @@
             <h2 class="certificates__title">СЕРТИФИКАТЫ</h2>
             <div class="certificates__items">
                 <div class="certificates__item">
-                    <img alt="cert" class="certificates__item-pic" src="img/cert1_1.jpg">
+                    <img alt="cert" class="certificates__item-pic" src="img/certificates/11.jpg">
                 </div>
                 <div class="certificates__item">
-                    <img alt="cert" class="certificates__item-pic" src="img/cert2_2.jpg">
+                    <img alt="cert" class="certificates__item-pic" src="img/certificates/22.jpg">
                 </div>
                 <div class="certificates__item">
-                    <img alt="cert" class="certificates__item-pic" src="img/cert3_3.jpg">
+                    <img alt="cert" class="certificates__item-pic" src="img/certificates/33.jpg">
+                </div>
+                <div class="certificates__item">
+                    <img alt="cert" class="certificates__item-pic" src="img/certificates/44.jpg">
+                </div>
+                <div class="certificates__item">
+                    <img alt="cert" class="certificates__item-pic" src="img/certificates/55.jpg">
+                </div>
+                <div class="certificates__item">
+                    <img alt="cert" class="certificates__item-pic" src="img/certificates/66.jpg">
                 </div>
                 <div class="certificates__item">
                     <img alt="cert" class="certificates__item-pic" src="img/cert4_1.jpg">
